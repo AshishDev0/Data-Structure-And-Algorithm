@@ -26,7 +26,7 @@ class Solution {
                 j++;
             }
 
-            if (ele1 != Integer.MIN_VALUE && ele2 != Integer.MIN_VALUE)
+            if (k > idx2)
                 break;
         }
 
@@ -36,7 +36,7 @@ class Solution {
             k++;
             i++;
 
-            if (ele1 != Integer.MIN_VALUE && ele2 != Integer.MIN_VALUE)
+            if (k > idx2)
                 break;
         }
 
@@ -46,7 +46,7 @@ class Solution {
             k++;
             j++;
 
-            if (ele1 != Integer.MIN_VALUE && ele2 != Integer.MIN_VALUE)
+            if (k > idx2)
                 break;
         }
 
