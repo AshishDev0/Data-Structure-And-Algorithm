@@ -28,7 +28,7 @@ class Solution {
         int ans = -1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (countNoOfSubArrays(a, mid) <= k) {
+            if (countNoOfSubAwrrays(a, mid) <= k) {
                 ans = mid;
                 high = mid - 1;
             } else {
