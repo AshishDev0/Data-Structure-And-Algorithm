@@ -4,14 +4,16 @@ class Solution {
 
         if (n == 0 || x == 1) return 1;
 
+        long temp = n;
+
         if (n < 0) {
             x = 1 / x;
-            n = -1 * n;
+            temp = -1L * n;
         }
 
         double ans = 1;
 
-        for (int i = 0; i < n; i++)
+        for (long i = 0; i < temp; i++)
             ans *= x;
 
         return ans;
