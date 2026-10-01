@@ -31,6 +31,6 @@ class Solution {
             return Integer.MIN_VALUE;
         }
 
-        return isPositive ? ans : -1 * ans;
+        return isPositive ? ans : -ans;
     }
 }
