@@ -1,33 +1,18 @@
 class Solution {
-    private int countOne(int[] row) {
-        int low = 0;
-        int high = row.length - 1;
-
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-
-            if (row[mid] == 1)
-                high = mid - 1;
-            else
-                low = mid + 1;
-        }
-
-        return row.length - low;
-    }
-
     public int rowWithMax1s(int[][] mat) {
-        int idx = -1;
-        int maxCount = 0;
+        int ans = -1;
+        int i = 0;
+        int j = mat[0].length - 1;
 
-        for (int i = 0; i < mat.length; i++) {
-            int count = countOne(mat[i]);
-
-            if (count > maxCount) {
-                maxCount = count;
-                idx = i;
+        while (i < mat.length && j >= 0) {
+            if (mat[i][j] == 1) {
+                ans = i;
+                j--;
+            } else {
+                i++;
             }
         }
 
-        return idx;
+        return ans;
     }
 }
