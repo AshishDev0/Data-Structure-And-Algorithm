@@ -13,6 +13,7 @@ class Solution {
             while ((r - l + 1) - maxFreq > k) {
                 hash[s.charAt(l) - 'A']--;
 
+                maxFreq = 0;
                 for (int i = 0; i < 26; i++) {
                     maxFreq = Math.max(maxFreq, hash[i]);
                 }
